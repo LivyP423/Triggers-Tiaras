@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://ctp0o18g7yp8p"]
+
+[ext_resource type="Texture2D" uid="uid://dp0a8hcs56vlk" path="res://Assets/Weapons/pixil-frame-0 (7).png" id="1_v7oki"]
+[ext_resource type="Script" uid="uid://0sd4ebfoeouy" path="res://bullet.gd" id="1_v8qja"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tqvvy"]
+size = Vector2(34, 10)
+
+[node name="Bullet" type="Area2D" unique_id=1338063866]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_v8qja")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=59334352]
+texture_filter = 1
+position = Vector2(9.536743e-07, 1.0000005)
+scale = Vector2(5.3333335, 4.25)
+texture = ExtResource("1_v7oki")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1336686059]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_tqvvy")
+debug_color = Color(0.88426083, 0.08993565, 0.77819896, 0.41960785)

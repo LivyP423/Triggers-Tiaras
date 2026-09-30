@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dw35m80pwgo1u"]
+
+[ext_resource type="Script" uid="uid://olxu1h1oviab" path="res://gun.gd" id="1_dk5gl"]
+[ext_resource type="Texture2D" uid="uid://cqicjilr3yshi" path="res://Assets/Weapons/pixil-frame-0 (6).png" id="1_vk1bi"]
+[ext_resource type="AudioStream" uid="uid://hesi5dk4nyfm" path="res://Assets/Sound Effects/lolo_s-shoot-474072.mp3" id="3_kw0bs"]
+
+[node name="gun" type="CharacterBody2D" unique_id=890235902]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_dk5gl")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1874463357]
+scale = Vector2(3.75, 3.5)
+texture = ExtResource("1_vk1bi")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1019667556]
+position = Vector2(-38, -7.0000005)
+scale = Vector2(1.1200012, 3.7599998)
+target_position = Vector2(1400, 0)
+collision_mask = 4
+
+[node name="Muzzle" type="Marker2D" parent="RayCast2D" unique_id=879140382]
+position = Vector2(53.57137, 1.268184e-07)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=275374817]
+stream = ExtResource("3_kw0bs")
